@@ -17,10 +17,10 @@ services:
   frontend:
     labels:
       shipyard.route: '/'
+      kompose.service.type: LoadBalancer
     image: gcr.io/google-samples/gb-frontend:v4
     ports:
       - "80:80"
     environment:
       - GET_HOSTS_FROM=dns
-    labels:
-      kompose.service.type: LoadBalancer
+      
